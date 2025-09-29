@@ -1,9 +1,9 @@
-Name: YOUR NAME HERE
+Name: Ryan Faris
 
-| Date    |  Time  |                                     Update |
-|:--------|:------:|-------------------------------------------:|
-| April 5 | 9-10pm | I tried to write abstract, efficient code. |
-|         |        |                                            |
+| Date         |     Time      |                                                                                                                                                                                                                                                                                                                                                                                                                                                              Update |
+|:-------------|:-------------:|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| September 24 | 11:17-11:55pm |                                                                                                                                                                                                                                                                              I started to code my binary search algorithm. I kept running into different bugs because I have forgotten how to code it from CS1, so it took a little bit of warming up to get going. |
+| September 26 |  8:45-9:55pm  |  I got most of it working, except I ran into one final bug. I was sure that it would work, but it just wouldn't pass the test. So, I added some print statements to see what was going on, and then I realized that I was adding the correctly spelled words to my array. So, I included a "found" variable which made it work! I also tried thinking of different ways not to have both an arraylist and an array, but I just couldn't think of a way around that. |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.
