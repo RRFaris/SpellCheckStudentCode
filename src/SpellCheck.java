@@ -11,27 +11,26 @@ import java.util.ArrayList;
 
 public class SpellCheck {
     public String[] checkWords(String[] text, String[] dictionary) {
-    Node first = new Node(false);
+        Node first = new Node(false);
+        Trie dictionaryTST = new Trie(first);
 
-    Trie dictionaryTST = null;
-
-    // Fill trie/tst with all the words in the dictionary
-    for (String word : dictionary) {
-        dictionaryTST.insert(word);
-    }
-
-    Trie mispelled = null;
-
-    for (String word : text) {
-        // Check if there are duplicates or if the word is in the dictionary
-        if (!mispelled.lookup(word) && !dictionaryTST.lookup(word)) {
-            mispelled.insert(word);
+        // Fill trie/tst with all the words in the dictionary
+        for (String word : dictionary) {
+            dictionaryTST.insert(word);
         }
-    }
+
+        Trie misspelled = null;
+
+        for (String word : text) {
+            // Check if there are duplicates or if the word is in the dictionary
+            if (!misspelled.lookup(word) && !dictionaryTST.lookup(word)) {
+                misspelled.insert(word);
+            }
+        }
 
 
-    // Turn trie/tst into an array
-    return null;
+        // Turn trie/tst into an array
+        return null;
 
 
 
