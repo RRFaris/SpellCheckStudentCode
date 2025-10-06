@@ -11,14 +11,18 @@ public class Trie {
     public void insert(String word) {
         for (int i = 0; i < word.length(); i++) {
             Node node = root;
-            for (int j = 0; j < 26; j++) {
-                Node currentNode = node.getNext()[j];
-                if (j + 'a' == word.charAt(i)) {
-                    node = currentNode;
-                    System.out.println(word.charAt(i));
-                    break;
-                }
+            boolean isWord = false;
+
+            // Check if at the end of a word
+            if (i == word.length() - 1) {
+                isWord = true;
+                System.out.println(word.charAt(i));
             }
+            else {
+                isWord = false;
+            }
+            if (node.getNext()[word.charAt(i) - 'a'] != null)
+                node.getNext()[word.charAt(i) - 'a'] = new Node(isWord);
         }
     }
 
