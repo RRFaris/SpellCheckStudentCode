@@ -7,7 +7,7 @@ public class Node {
     public Node (boolean isWord) {
         this.isWord = isWord;
         // Every node has an array of every possible following letter
-        next = new Node[26];
+        next = new Node[256];
     }
 
     // Methods

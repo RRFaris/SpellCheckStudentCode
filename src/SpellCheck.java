@@ -11,6 +11,11 @@ import java.util.ArrayList;
 
 public class SpellCheck {
     public String[] checkWords(String[] text, String[] dictionary) {
+            // Used for looking for nodes in a TST by going through the array that each node has
+            final int LEFT = 0;
+            final int MIDDLE = 1;
+            final int RIGHT = 2;
+
             Trie dictionaryTST = new Trie(new Node(false));
             Trie misspelled = new Trie(new Node(false));
 
@@ -19,18 +24,19 @@ public class SpellCheck {
                 dictionaryTST.insert(word);
             }
 
+            ArrayList<String> misspelledArrList = new ArrayList<>();
             for (String word : text) {
                 // Check if there are duplicates or if the word is in the dictionary
                 if (!misspelled.lookup(word) && !dictionaryTST.lookup(word)) {
                     misspelled.insert(word);
-
+                    misspelledArrList.add(word);
                 }
-                System.out.println(misspelled.lookup(word));
             }
 
-
             // Turn trie/tst into an array
-            return null;
+            String[] misspelledArr = new String[misspelledArrList.size()];
+            misspelledArrList.toArray(misspelledArr);
+            return misspelledArr;
 
 
 
