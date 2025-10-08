@@ -2,13 +2,13 @@ public class TSTNode {
     // Instance variables
     private boolean isWord;
     private char letter;
-    private char[] options;
+    private TSTNode[] options;
 
     // Constructor
     public TSTNode(char letter, boolean isWord) {
         this.letter = letter;
         this.isWord = isWord;
-        options = new char[3];
+        options = new TSTNode[3];
     }
 
     // Methods
@@ -20,12 +20,12 @@ public class TSTNode {
         this.letter = letter;
     }
 
-    public char[] getOptions() {
+    public TSTNode[] getOptions() {
         return options;
     }
 
-    public void setOptions(char[] options) {
-        this.options = options;
+    public void setOptions(int index, TSTNode node) {
+        options[index] = node;
     }
 
     public boolean isWord() {
