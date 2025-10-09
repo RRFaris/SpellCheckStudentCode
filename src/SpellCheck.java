@@ -11,14 +11,14 @@ import java.util.ArrayList;
 
 public class SpellCheck {
     public String[] checkWords(String[] text, String[] dictionary) {
-            // TRIES
+            // TRIES (comment out the 2 lines below if you want to use TSTs)
 //            Trie dictionaryData = new Trie(new Node(false));
 //            Trie misspelled = new Trie(new Node(false));
 
-            // TSTs
-            char a = 'a';
-            TST dictionaryData = new TST(new TSTNode(a, false));
-            TST misspelled = new TST(new TSTNode(a,false));
+            // TSTs (comment out the 3 lines below if you want to use Tries)
+            char root = 'm';
+            TST dictionaryData = new TST(new TSTNode(root, false));
+            TST misspelled = new TST(new TSTNode(root,false));
 
             // Fill trie/tst with all the words in the dictionary
             for (String word : dictionary) {
@@ -37,19 +37,8 @@ public class SpellCheck {
             // Turn trie/tst into an array
             String[] misspelledArr = new String[misspelledArrList.size()];
             misspelledArrList.toArray(misspelledArr);
+
             return misspelledArr;
-
-
-
-
-
-
-
-
-
-
-
-
 
         /**
          * Binary Search

@@ -33,8 +33,7 @@ public class Trie {
             // Else, go to the next node and repeat
             node = node.getNext()[word.charAt(i)];
         }
-        // Even if a word seems to be in the dictionary, it may only be a segment, so this checks if the word is
-        // actually in the dictionary
+        // Check if "words" are actually segments
         return node.isWord();
     }
 }
